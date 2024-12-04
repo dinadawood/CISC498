@@ -40,7 +40,7 @@ function App(): JSX.Element {
                             style={{ position: "absolute", left: 0 }}
                         >
                             <img
-                                src={require("./Images/CCHLogo.png")}
+                                src={require("./images/CCHLogo.png")}
                                 alt="Company Logo"
                                 style={{
                                     width: "175px",
@@ -100,7 +100,7 @@ function App(): JSX.Element {
             </Container>
             <hr></hr>
             <img
-                src={require("./Images/mission_etc.png")}
+                src={require("./images/mission_etc.png")}
                 alt="Company Mission"
                 style={{ width: "100%", height: "100%" }}
             ></img>
@@ -111,7 +111,7 @@ function App(): JSX.Element {
                 }}
             >
                 <img
-                    src={require("./Images/CCHBottomLogo.png")}
+                    src={require("./images/CCHBottomLogo.png")}
                     alt="Company Contact"
                     style={{ width: "100%", height: "100%" }}
                 />
