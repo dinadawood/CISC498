@@ -101,8 +101,8 @@ function App(): JSX.Element {
             <hr></hr>
             <img
                 src={require("./Images/mission_etc.png")}
-                width="100%"
-                height="100%"
+                alt="Company Mission"
+                style={{ width: "100%", height: "100%" }}
             ></img>
             <footer
                 style={{
