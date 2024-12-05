@@ -7,6 +7,12 @@ import { Row, Col, Container } from "react-bootstrap";
 import { ViewFiles } from "./Components/ViewFiles";
 import { ContactUs } from "./Components/ContactUs";
 import { AboutUs } from "./Components/AboutUs";
+import { files as startFiles } from "./Components/FileData";
+
+interface File {
+    name: string;
+    content: string;
+}
 
 function App(): JSX.Element {
     // Handing Import Modal
@@ -15,15 +21,30 @@ function App(): JSX.Element {
     const handleShowImportModal = () => setShowImportModal(true);
     const handleCloseImportModal = () => setShowImportModal(false);
 
-    const importFiles = (data: string) => {
-        console.log("Imported Files Data:", data);
-    };
-
     // Handling Export Modal
     const [showExportModal, setShowExportModal] = useState(false);
 
     const handleShowExportModal = () => setShowExportModal(true);
     const handleCloseExportModal = () => setShowExportModal(false);
+
+    // Handling imported files in View Files tab:
+    const [files, setFiles] = useState<File[]>(startFiles);
+
+    const handleImportView = (fileName: string, content: string) => {
+        setFiles((prevFiles) => [...prevFiles, { name: fileName, content }]);
+    };
+
+    // const importFiles = (data: string) => {
+    //     console.log("Imported Files Data:", data);
+    // };
+
+    // Handling Delete File functionality:
+
+    const handleDeleteFile = (fileName: string) => {
+        setFiles((prevFiles) =>
+            prevFiles.filter((file) => file.name !== fileName)
+        );
+    };
 
     // Calling all functions in App
     return (
@@ -71,18 +92,24 @@ function App(): JSX.Element {
                         <AboutUs />
                     </Col>
                     <Col xs="auto">
-                        <ViewFiles />
+                        <ViewFiles files={files} onDelete={handleDeleteFile} />
                     </Col>
                     <Col xs="auto">
                         <ImportCSV
                             show={showImportModal}
                             showImportfileModal={handleShowImportModal}
                             handleClose={handleCloseImportModal}
-                            importFiles={importFiles}
+                            importFiles={(fileName) =>
+                                handleImportView(
+                                    fileName,
+                                    "Imported File Content"
+                                )
+                            }
                         />
                     </Col>
                     <Col xs="auto">
                         <ExportCSV
+                            files={files}
                             show={showExportModal}
                             showExportfileModal={handleShowExportModal}
                             handleClose={handleCloseExportModal}

@@ -4,13 +4,20 @@ import { Button, Modal, Form } from "react-bootstrap";
 import { files } from "./FileData";
 import "../App.css";
 
+interface File {
+    name: string;
+    content: string;
+}
+
 interface ExportProps {
+    files: File[];
     show: boolean;
     showExportfileModal: () => void;
     handleClose: () => void;
 }
 
 export const ExportCSV = ({
+    files,
     show,
     showExportfileModal,
     handleClose

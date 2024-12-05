@@ -27,15 +27,9 @@ export const ImportCSV = ({
 
     const handleImport = () => {
         if (selectedFile) {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                if (event.target) {
-                    const fileData = event.target.result as string;
-                    handleClose();
-                    importFiles(fileData);
-                }
-            };
-            reader.readAsText(selectedFile);
+            const fileName = selectedFile.name;
+            importFiles(fileName);
+            handleClose();
         }
     };
 
