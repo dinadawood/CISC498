@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { files } from "./FileData";
+// import { files } from "./FileData";
 import "../App.css";
 
 interface File {
