@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/CISC498/static/css/main.132cd100.css",
-    "main.js": "/CISC498/static/js/main.58a21627.js",
+    "main.js": "/CISC498/static/js/main.13102e8b.js",
     "static/js/787.4ef7427d.chunk.js": "/CISC498/static/js/787.4ef7427d.chunk.js",
     "static/media/mission_etc.png": "/CISC498/static/media/mission_etc.bd7e8d699f335e4b8b29.png",
     "static/media/CCHBottomLogo.png": "/CISC498/static/media/CCHBottomLogo.0d791598f6e54615c139.png",
     "static/media/CCHLogo.png": "/CISC498/static/media/CCHLogo.244cd6cd69517b155255.png",
     "index.html": "/CISC498/index.html",
     "main.132cd100.css.map": "/CISC498/static/css/main.132cd100.css.map",
-    "main.58a21627.js.map": "/CISC498/static/js/main.58a21627.js.map",
+    "main.13102e8b.js.map": "/CISC498/static/js/main.13102e8b.js.map",
     "787.4ef7427d.chunk.js.map": "/CISC498/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.132cd100.css",
-    "static/js/main.58a21627.js"
+    "static/js/main.13102e8b.js"
   ]
 }
